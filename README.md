@@ -24,7 +24,8 @@ A lightweight, polished, and professional-grade CPU monitor plugin for your Mac�
 
 📸 Screenshot
 
-(Add a nice screenshot here — you already have good material!)
+<img width="268" alt="image" src="https://github.com/user-attachments/assets/ce586b3e-a7fa-4d6b-afd2-2051f68ece6b" />
+
 
 ⸻
 
