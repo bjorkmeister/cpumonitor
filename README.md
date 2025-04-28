@@ -7,9 +7,7 @@ A lightweight, polished, and professional-grade CPU monitor plugin for your Mac�
 ✨ Features
 
 	•	📈 Live CPU Load display (normalized across all cores).
- 
 	•	🧠 Top 10 active processes with:
- 
 	•	CPU usage (% normalized)
 	•	RAM usage (MB)
 	•	Color-coded CPU load (red/orange/yellow/gray).
