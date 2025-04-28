@@ -51,17 +51,15 @@ chmod +x ~/Library/Application\ Support/xbar/plugins/cpu.5s.py
 🔧 Customization
 
 Option	How to Customize
-Refresh Interval	Rename the file, e.g., cpu.1m.py for 1 minute refresh.
 
-Top Process Count	Edit the [:10] slice in the code (line where processes are sorted).
+	•	Refresh Interval	Rename the file, e.g., cpu.1m.py for 1 minute refresh.
+	•	Top Process Count	Edit the [:10] slice in the code (line where processes are sorted).
+	•	RAM warning threshold	Change the >1000 MB logic to your own value if needed.
+	•	Color Thresholds	Adjust when CPU turns red/orange/yellow inside the Python if-else block.
+	•	Expand or simplify details	Modify the fields fetched via /bin/ps.
+	•	All edits are extremely easy — code is designed to be readable and hackable.
 
-RAM warning threshold	Change the >1000 MB logic to your own value if needed.
 
-Color Thresholds	Adjust when CPU turns red/orange/yellow inside the Python if-else block.
-
-Expand or simplify details	Modify the fields fetched via /bin/ps.
-
-All edits are extremely easy — code is designed to be readable and hackable.
 
 ⸻
 
