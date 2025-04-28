@@ -52,9 +52,13 @@ chmod +x ~/Library/Application\ Support/xbar/plugins/cpu.5s.py
 
 Option	How to Customize
 Refresh Interval	Rename the file, e.g., cpu.1m.py for 1 minute refresh.
+
 Top Process Count	Edit the [:10] slice in the code (line where processes are sorted).
+
 RAM warning threshold	Change the >1000 MB logic to your own value if needed.
+
 Color Thresholds	Adjust when CPU turns red/orange/yellow inside the Python if-else block.
+
 Expand or simplify details	Modify the fields fetched via /bin/ps.
 
 All edits are extremely easy — code is designed to be readable and hackable.
@@ -62,18 +66,17 @@ All edits are extremely easy — code is designed to be readable and hackable.
 ⸻
 
 🛠 Troubleshooting
-	•	Permissions:
-If you don’t see some processes listed, ensure xbar has full disk access in System Settings ➔ Privacy ➔ Full Disk Access.
-	•	“Command not found” errors:
-This should no longer happen — but if it does, double-check /bin/ps is available (standard macOS install).
-	•	“Kill” confirmation popup not appearing:
-Make sure AppleScript is allowed to interact with apps (under Automation Privacy settings).
+
+	•	Permissions: If you don’t see some processes listed, ensure xbar has full disk access in System Settings ➔ Privacy ➔ Full Disk Access.
+	•	“Command not found” errors: This should no longer happen — but if it does, double-check /bin/ps is available (standard macOS install).
+	•	“Kill” confirmation popup not appearing: Make sure AppleScript is allowed to interact with apps (under Automation Privacy settings).
 
 ⸻
 
 🤝 Contribution Guidelines
 
 If you want to suggest improvements:
+
 	•	Fork the repo.
 	•	Make a clean pull request.
 	•	Follow the clean, readable style already used (PEP8 conventions).
