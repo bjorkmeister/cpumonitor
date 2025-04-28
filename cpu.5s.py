@@ -64,16 +64,16 @@ def main():
             else:
                 color = "gray"
 
-            # Display instance
+            # Display instance with correct color directive (only one | color=...)
             print(f"{instance} ({cpu_usage:.1f}%, {mem_mb}MB{ram_warning}) | color={color}")
 
             # Cascade menu under instance
             path_to_open = os.path.dirname(command_full)
             if not path_to_open or path_to_open == '/':
                 path_to_open = command_full
-            print(f"--Open in Finder | bash='open \"{path_to_open}\"' terminal=false refresh=false")
-            print(f"--Kill Instance | bash='osascript -e \"if (button returned of (display dialog \\\"Kill process {instance}?\\\" buttons {{\\\"Cancel\\\", \\\"Kill\\\"}} default button \\\"Cancel\\\") is \\\"Kill\\\" then do shell script \\\"kill {pid}\\\"\"' terminal=false refresh=true")
-            print(f"--Show Details | bash=/bin/ps param1=-p param2={pid} param3=-o param4=pid,ppid,%cpu,%mem,nice,lstart,etime,command terminal=true refresh=false")
+            print(f"--📂 Open in Finder | bash='open \"{path_to_open}\"' terminal=false refresh=false")
+            print(f"--❗ Kill Instance | bash='/bin/bash' param1=-c param2='if /usr/bin/osascript -e \"tell application \\\"System Events\\\" to display dialog \\\"Kill this process?\\\\n{instance}\\\\nCPU: {cpu_usage:.1f}% | Memory: {mem_mb}MB\\\\nPID: {pid}\\\" buttons {{\\\"Cancel\\\",\\\"Kill\\\"}} default button \\\"Cancel\\\"\" | grep -q \"button returned:Kill\"; then kill {pid}; fi' terminal=false refresh=true")
+            print(f"--ℹ️ Show Details | bash=/bin/ps param1=-p param2={pid} param3=-o param4=pid,ppid,%cpu,%mem,nice,lstart,etime,command terminal=true refresh=false")
 
         print("---")
     except Exception:
